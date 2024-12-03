@@ -1,3 +1,3 @@
 def call(String appname,String tag,String DockerHubUsr){
-  docker build -t "$(DockerHubUsr)"/"$(appname)":"$(tag)" .
+  sh "docker build -t "$(DockerHubUsr)"/"$(appname)":"$(tag)" . "
 }
