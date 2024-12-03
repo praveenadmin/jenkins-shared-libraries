@@ -1,3 +1,4 @@
-def call(String appname,String tag,String DockerHubUser){
-  sh "docker build -t "$(DockerHubUser)"/"$(appname)":"$(tag)" ."
+def call(String repoUrl, String branch) {
+    git url: repoUrl, branch: branch
+    echo "Checked out ${branch} from ${repoUrl}"
 }
