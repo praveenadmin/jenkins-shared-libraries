@@ -1,3 +1,4 @@
-def call(String url, String branch){
-  git url:"${url}", branch:"${branch}"
-  }
+def call(String repoUrl, String branch) {
+    git url: repoUrl, branch: branch
+    echo "Checked out ${branch} from ${repoUrl}"
+}
